@@ -33,3 +33,9 @@ Thumbs.db
 .streamlit/secrets.toml
 .vscode/
 .idea/
+# Supabase and private pilot settings
+supabase/.temp/
+supabase/.branches/
+*.secret
+.streamlit/secrets.*.toml
+!.streamlit/secrets.toml.example

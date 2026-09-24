@@ -64,3 +64,10 @@ La V1 está diseñada para un único proceso local. Para reiniciar los datos, de
 - Se deben conservar las carpetas `.streamlit`, `assets`, `components`, `data`, `services`, `tests` y `views`.
 - La dirección del servidor no se fija en la configuración compartida. El iniciador local conserva `127.0.0.1`.
 - Los datos JSON y archivos adjuntos del prototipo en Community Cloud pueden perder cambios al reiniciar o desplegar; este repositorio contiene datos de demostración, no una base de datos empresarial.
+
+
+## Persistencia Supabase
+
+Integración privada, migraciones y guía de prueba: [supabase/README.md](supabase/README.md).
+Con credenciales completas se utiliza Supabase; sin ellas se mantiene el JSON de demostración.
+Configurar la clave solamente en los secretos del servidor. El ejemplo seguro está en `.streamlit/secrets.toml.example`.

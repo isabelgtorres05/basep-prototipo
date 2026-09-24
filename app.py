@@ -10,7 +10,16 @@ from views.portal import portal,CLIENT_MENU
 
 st.set_page_config(page_title='BASEP · Gestión de servicios',page_icon='🔧',layout='wide',initial_sidebar_state='expanded')
 styles()
-db=load()
+from services.supabase_client import configured,require_private_access
+try:
+    remote_mode=configured()
+    require_private_access()
+except ValueError as error:
+    st.error(str(error));st.stop()
+try:
+    db=load()
+except ValueError as error:
+    st.error(str(error));st.stop()
 ADMIN_MENU=['Dashboard','Programación','Órdenes de servicio','Solicitudes / Tickets','Clientes','Equipos','Técnicos','Ubicación / Mapa','Inventario','Informes','Indicadores','Portal Cliente','Configuración']
 with st.sidebar:
     st.image(str(LOGO),width=210)
@@ -33,7 +42,7 @@ with st.sidebar:
     navigation_style(menu)
     page=st.radio('Navegación',menu,key='nav',format_func=nav_label,label_visibility='collapsed')
     st.divider();st.caption('Ingeniería a su Servicio')
-    st.caption('Datos ficticios · Cambios guardados localmente')
+    st.caption('Persistencia Supabase · Piloto privado' if remote_mode else 'Datos ficticios · Cambios guardados localmente')
 
 role_class='role-client' if role=='Cliente' else 'role-technician' if role=='Técnico' else 'role-admin'
 st.markdown(f'<span class="{role_class}"></span>',unsafe_allow_html=True)
@@ -70,9 +79,9 @@ else:
         portal(scoped(db,cid),cid,portal_page)
     elif page=='Configuración':
         heading('Configuración','Alcance y evolución del prototipo BASEP.')
-        st.success('Persistencia local JSON activada. Los formularios y estados se conservan al reiniciar.')
+        st.success('Persistencia Supabase activada. Datos y archivos privados guardados en la nube.' if remote_mode else 'Persistencia local JSON activada. Los formularios y estados se conservan al reiniciar.')
         st.markdown('**Disponible:** gestión de clientes y sedes, equipos, tickets, programación, órdenes, evidencias, recepción, inventario, informes e indicadores.')
         st.info('El selector de vistas permite probar experiencias. No es autenticación ni un control de acceso empresarial. Usar únicamente datos de prueba.')
         st.markdown('**Simulado:** recepción del dispositivo, conectividad, ubicación, recorrido y firma escrita. El QR es una reserva visual.')
-        st.markdown('**Evolución prevista:** repositorios PostgreSQL, autenticación, API de sincronización, almacenamiento de evidencias y aplicaciones móviles offline. No implementados en V1.')
+        st.markdown('**Persistencia:** integración opcional con PostgreSQL y Storage de Supabase. **Pendiente:** autenticación empresarial, API de sincronización y aplicaciones móviles offline.')
         st.caption('Prototipo de un solo proceso local. Las entidades tienen identificadores y relaciones separadas; cada orden conserva su línea de tiempo.')
