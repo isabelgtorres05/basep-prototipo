@@ -28,7 +28,7 @@ def tickets_page(db,client=False):
     heading('Mis solicitudes' if client else 'Solicitudes / Tickets','Desde el requerimiento hasta una solución trazable.')
     status=st.selectbox('Estado de solicitud',['Todos','Recibido','En revisión','Programado','En ejecución','Finalizado'])
     found=[t for t in db['tickets'] if status=='Todos' or t['status']==status]
-    table([{'Número':t['id'],'Cliente':label(db,'clients',t['client_id']),'Equipo':label(db,'equipment',t['equipment_id']),'Fecha':t['created'],'Necesidad':t['type'],'Prioridad':t['priority'],'Estado':t['status'],'Responsable':t['responsible'],'Transcurrido (h)':round((datetime.now()-datetime.fromisoformat(t['created'])).total_seconds()/3600,1)} for t in found])
+    table([{'Número':t['id'],'Cliente':label(db,'clients',t['client_id']),'Equipo':label(db,'equipment',t['equipment_id']),'Fecha':t['created'],'Necesidad':t['type'],'Prioridad':t['priority'],'Estado':t['status'],'Responsable':t['responsible'],'Transcurrido (h)':round((datetime.fromisoformat(now())-datetime.fromisoformat(t['created'])).total_seconds()/3600,1)} for t in found])
     if not found: return
     tid=st.selectbox('Consultar solicitud',[t['id'] for t in found]); t=get(db,'tickets',tid)
     st.write(t['description']);st.caption(f"Contacto: {t['contact']} · Orden: {t.get('order_id') or 'Pendiente de programación'}")

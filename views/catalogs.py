@@ -10,6 +10,7 @@ def clients_page(db):
     with st.expander('＋ Registrar cliente'):
         client_form(db,None)
     cid=pick(db,'clients','Ficha del cliente')
+    if not cid: return
     c=get(db,'clients',cid)
     tabs=st.tabs(['Información','Sedes','Equipos','Solicitudes','Órdenes e historial','Documentos'])
     with tabs[0]: client_form(db,c)
@@ -51,6 +52,8 @@ def documents(e,client):
         if p.exists(): st.download_button(f'{d["kind"]} · {d["name"]}',p.read_bytes(),file_name=d['name'],key=f'doc_{e["id"]}_{d["path"]}')
 
 def equipment_form(db,e=None):
+    if not db["clients"]:
+        st.info("Primero registra un cliente.");return
     v=e or {}
     cid=st.selectbox('Cliente propietario',[x['id'] for x in db['clients']],index=[x['id'] for x in db['clients']].index(v['client_id']) if e else 0,format_func=lambda x:label(db,'clients',x),key='eq_client_'+v.get('id','new'),disabled=bool(e))
     sites=[s for s in db['sites'] if s['client_id']==cid]

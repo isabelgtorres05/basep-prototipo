@@ -162,6 +162,7 @@ def detail(db,o,technician=False):
                 part=pick(db,'inventory','Repuesto requerido');qty=st.number_input('Cantidad',1,100,1);reason=st.text_input('Motivo');priority=st.selectbox('Prioridad del repuesto',['Media','Alta','Urgente'])
                 if st.form_submit_button('Solicitar repuesto'):
                     if not reason.strip(): st.error('Indica el motivo.')
+                    elif not part: st.error('Registra primero el repuesto en Inventario.')
                     else: add('part_requests',dict(order_id=o['id'],tech_id=o['tech_id'],equipment_id=o['equipment_id'],part_id=part,quantity=qty,reason=reason,priority=priority,status='Pendiente'),'REP-');st.rerun()
         table([r for r in db['part_requests'] if r['order_id']==o['id']])
     with tabs[1]:

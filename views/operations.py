@@ -109,7 +109,16 @@ def technicians(db,map_view=False):
             'Tarea actual':next((o['id'] for o in db['orders'] if o['tech_id']==t['id'] and o['status'] in ['En ejecución','En desplazamiento']), '—'),
             'Cliente actual':next((label(db,'clients',o['client_id']) for o in db['orders'] if o['tech_id']==t['id'] and o['status'] in ['En ejecución','En desplazamiento']), '—'),
             'Última ubicación':f"{t['lat']:.3f}, {t['lon']:.3f}"} for t in db['techs']])
-    tid=pick(db,'techs','Seleccionar técnico');t=get(db,'techs',tid);orders=[o for o in db['orders'] if o['tech_id']==tid]
+    if not map_view:
+        with st.expander('＋ Registrar técnico'):
+            technician_form(db)
+    tid=pick(db,'techs','Seleccionar técnico')
+    if not tid: return
+    t=get(db,'techs',tid)
+    if not map_view:
+        with st.expander('Editar técnico'):
+            technician_form(db,t)
+    orders=[o for o in db['orders'] if o['tech_id']==tid]
     a,b=st.columns([1,2])
     with a:
         st.subheader(t['name']);st.write(t['specialty']);st.write(t['phone']);st.write(t['email']);st.caption(f"{t['device']} · {t['battery']} % batería")
@@ -125,6 +134,22 @@ def technicians(db,map_view=False):
 def inventory(db):
     heading('Inventario','Repuestos, existencias y solicitudes del equipo de campo.')
     table([{'Código':p['id'],'Producto':p['name'],'Categoría':p['category'],'Stock':p['stock'],'Mínimo':p['minimum'],'Ubicación':p['location'],'Estado':'Bajo mínimo' if p['stock']<p['minimum'] else 'Disponible'} for p in db['inventory']])
+    with st.expander('＋ Registrar repuesto'):
+        from services.store import add
+        with st.form('new_inventory'):
+            name=st.text_input('Nombre del repuesto')
+            category=st.text_input('Categoría del repuesto')
+            location=st.text_input('Ubicación del repuesto')
+            stock=st.number_input('Stock inicial',min_value=0,step=1)
+            minimum=st.number_input('Stock mínimo',min_value=0,step=1)
+            if st.form_submit_button('Guardar repuesto'):
+                if not name.strip(): st.error('Escribe el nombre del repuesto.')
+                else:
+                    add('inventory',dict(name=name,category=category,location=location,stock=stock,minimum=minimum),'R')
+                    st.rerun()
+    if not db['inventory']:
+        st.info('El inventario real está vacío. Registra los repuestos antes de crear movimientos.')
+        return
     a,b=st.columns(2)
     with a:
         st.subheader('Registrar movimiento')
@@ -226,3 +251,21 @@ def dashboard(db,indicators=False):
         st.subheader('Próximos servicios');order_cards(db,sorted([o for o in pending if o['date']>str(today)],key=lambda o:o['date'])[:5],prefix='upcoming')
     with st.expander('Alertas y tareas atrasadas',expanded=False):
         table(order_rows(db,[o for o in pending if o['date']<str(today)]))
+
+
+def technician_form(db, technician=None):
+    from services.store import add,update
+    t=technician or {}
+    with st.form('technician_'+t.get('id','new')):
+        values={}
+        for field,title in [('name','Nombre del técnico'),('document','Documento'),('phone','Teléfono del técnico'),('email','Correo del técnico'),('specialty','Cargo / especialidad')]:
+            values[field]=st.text_input(title,t.get(field,''))
+        states=['Disponible','En servicio','En desplazamiento','Pausa']
+        values['status']=st.selectbox('Estado del técnico',states,index=states.index(t.get('status','Disponible')))
+        if st.form_submit_button('Guardar técnico'):
+            if not values['name'].strip(): st.error('El nombre es obligatorio.');return
+            if technician: update('techs',t['id'],values)
+            else:
+                values.update(lat=0.0,lon=0.0,device='Sin dispositivo',battery=0)
+                add('techs',values,'T')
+            st.rerun()
