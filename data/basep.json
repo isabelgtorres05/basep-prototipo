@@ -1,1 +1,1941 @@
-
+{
+  "schema_version": 1,
+  "clients": [
+    {
+      "id": "C001",
+      "name": "Hospital San Gabriel",
+      "sector": "Salud",
+      "nit": "900123451-1",
+      "contact": "Laura Rojas",
+      "phone": "3005550101",
+      "email": "contacto1@example.com",
+      "address": "Carrera 15 # 41-20",
+      "city": "Bogotá",
+      "notes": "Cliente ficticio para demostración."
+    },
+    {
+      "id": "C002",
+      "name": "Laboratorio NovaLab",
+      "sector": "Laboratorio",
+      "nit": "900123452-1",
+      "contact": "Camilo Pérez",
+      "phone": "3005550102",
+      "email": "contacto2@example.com",
+      "address": "Carrera 18 # 42-20",
+      "city": "Bogotá",
+      "notes": "Cliente ficticio para demostración."
+    },
+    {
+      "id": "C003",
+      "name": "Industrias Andina",
+      "sector": "Industria",
+      "nit": "900123453-1",
+      "contact": "Andrés Ruiz",
+      "phone": "3005550103",
+      "email": "contacto3@example.com",
+      "address": "Carrera 21 # 43-20",
+      "city": "Bogotá",
+      "notes": "Cliente ficticio para demostración."
+    },
+    {
+      "id": "C004",
+      "name": "Universidad del Centro",
+      "sector": "Educación",
+      "nit": "900123454-1",
+      "contact": "Paula Torres",
+      "phone": "3005550104",
+      "email": "contacto4@example.com",
+      "address": "Carrera 24 # 44-20",
+      "city": "Bogotá",
+      "notes": "Cliente ficticio para demostración."
+    },
+    {
+      "id": "C005",
+      "name": "Alimentos del Valle",
+      "sector": "Alimentos",
+      "nit": "900123455-1",
+      "contact": "Diana López",
+      "phone": "3005550105",
+      "email": "contacto5@example.com",
+      "address": "Carrera 27 # 45-20",
+      "city": "Bogotá",
+      "notes": "Cliente ficticio para demostración."
+    }
+  ],
+  "sites": [
+    {
+      "id": "S001",
+      "client_id": "C001",
+      "name": "Sede principal",
+      "address": "Carrera 15 # 41-20",
+      "city": "Bogotá"
+    },
+    {
+      "id": "S002",
+      "client_id": "C002",
+      "name": "Sede principal",
+      "address": "Carrera 18 # 42-20",
+      "city": "Bogotá"
+    },
+    {
+      "id": "S003",
+      "client_id": "C003",
+      "name": "Sede principal",
+      "address": "Carrera 21 # 43-20",
+      "city": "Bogotá"
+    },
+    {
+      "id": "S004",
+      "client_id": "C004",
+      "name": "Sede principal",
+      "address": "Carrera 24 # 44-20",
+      "city": "Bogotá"
+    },
+    {
+      "id": "S005",
+      "client_id": "C005",
+      "name": "Sede principal",
+      "address": "Carrera 27 # 45-20",
+      "city": "Bogotá"
+    },
+    {
+      "id": "S006",
+      "client_id": "C001",
+      "name": "Sede Norte",
+      "address": "Calle 145 # 18-30",
+      "city": "Bogotá"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "E001",
+      "name": "Balanza analítica",
+      "code": "BASEP-EQ-001",
+      "serial": "SN-2024-1200",
+      "brand": "Ohaus",
+      "model": "AX224",
+      "category": "Masa",
+      "location": "Área técnica 1",
+      "client_id": "C001",
+      "site_id": "S001",
+      "status": "Activo",
+      "last_calibration": "2025-10-29",
+      "last_maintenance": "2026-07-26",
+      "next_calibration": "2026-10-24",
+      "next_review": "2026-11-23",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E002",
+      "name": "Balanza analítica",
+      "code": "BASEP-EQ-002",
+      "serial": "SN-2024-1201",
+      "brand": "Ohaus",
+      "model": "AX224",
+      "category": "Masa",
+      "location": "Área técnica 1",
+      "client_id": "C002",
+      "site_id": "S002",
+      "status": "Activo",
+      "last_calibration": "2025-10-28",
+      "last_maintenance": "2026-07-25",
+      "next_calibration": "2026-10-22",
+      "next_review": "2026-11-22",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E003",
+      "name": "Balanza analítica",
+      "code": "BASEP-EQ-003",
+      "serial": "SN-2024-1202",
+      "brand": "Ohaus",
+      "model": "AX224",
+      "category": "Masa",
+      "location": "Área técnica 1",
+      "client_id": "C003",
+      "site_id": "S003",
+      "status": "Próximo a vencer",
+      "last_calibration": "2025-10-27",
+      "last_maintenance": "2026-07-24",
+      "next_calibration": "2026-10-20",
+      "next_review": "2026-11-21",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E004",
+      "name": "Balanza analítica",
+      "code": "BASEP-EQ-004",
+      "serial": "SN-2024-1203",
+      "brand": "Ohaus",
+      "model": "AX224",
+      "category": "Masa",
+      "location": "Área técnica 1",
+      "client_id": "C004",
+      "site_id": "S004",
+      "status": "Vencido",
+      "last_calibration": "2025-10-26",
+      "last_maintenance": "2026-07-23",
+      "next_calibration": "2026-10-18",
+      "next_review": "2026-11-20",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E005",
+      "name": "Balanza analítica",
+      "code": "BASEP-EQ-005",
+      "serial": "SN-2024-1204",
+      "brand": "Ohaus",
+      "model": "AX224",
+      "category": "Masa",
+      "location": "Área técnica 1",
+      "client_id": "C005",
+      "site_id": "S005",
+      "status": "Fuera de servicio",
+      "last_calibration": "2025-10-25",
+      "last_maintenance": "2026-07-22",
+      "next_calibration": "2026-10-16",
+      "next_review": "2026-11-19",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E006",
+      "name": "Termohigrómetro",
+      "code": "BASEP-EQ-006",
+      "serial": "SN-2024-1205",
+      "brand": "Testo",
+      "model": "608-H1",
+      "category": "Temperatura",
+      "location": "Área técnica 2",
+      "client_id": "C001",
+      "site_id": "S001",
+      "status": "Activo",
+      "last_calibration": "2025-10-24",
+      "last_maintenance": "2026-07-21",
+      "next_calibration": "2026-10-14",
+      "next_review": "2026-11-18",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E007",
+      "name": "Termohigrómetro",
+      "code": "BASEP-EQ-007",
+      "serial": "SN-2024-1206",
+      "brand": "Testo",
+      "model": "608-H1",
+      "category": "Temperatura",
+      "location": "Área técnica 2",
+      "client_id": "C002",
+      "site_id": "S002",
+      "status": "Activo",
+      "last_calibration": "2025-10-23",
+      "last_maintenance": "2026-07-20",
+      "next_calibration": "2026-10-12",
+      "next_review": "2026-11-17",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E008",
+      "name": "Termohigrómetro",
+      "code": "BASEP-EQ-008",
+      "serial": "SN-2024-1207",
+      "brand": "Testo",
+      "model": "608-H1",
+      "category": "Temperatura",
+      "location": "Área técnica 2",
+      "client_id": "C003",
+      "site_id": "S003",
+      "status": "Próximo a vencer",
+      "last_calibration": "2025-10-22",
+      "last_maintenance": "2026-07-19",
+      "next_calibration": "2026-10-10",
+      "next_review": "2026-11-16",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E009",
+      "name": "Termohigrómetro",
+      "code": "BASEP-EQ-009",
+      "serial": "SN-2024-1208",
+      "brand": "Testo",
+      "model": "608-H1",
+      "category": "Temperatura",
+      "location": "Área técnica 2",
+      "client_id": "C004",
+      "site_id": "S004",
+      "status": "Vencido",
+      "last_calibration": "2025-10-21",
+      "last_maintenance": "2026-07-18",
+      "next_calibration": "2026-10-08",
+      "next_review": "2026-11-15",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E010",
+      "name": "Termohigrómetro",
+      "code": "BASEP-EQ-010",
+      "serial": "SN-2024-1209",
+      "brand": "Testo",
+      "model": "608-H1",
+      "category": "Temperatura",
+      "location": "Área técnica 2",
+      "client_id": "C005",
+      "site_id": "S005",
+      "status": "Fuera de servicio",
+      "last_calibration": "2025-10-20",
+      "last_maintenance": "2026-07-17",
+      "next_calibration": "2026-10-06",
+      "next_review": "2026-11-14",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E011",
+      "name": "Manómetro digital",
+      "code": "BASEP-EQ-011",
+      "serial": "SN-2024-1210",
+      "brand": "WIKA",
+      "model": "CPG1500",
+      "category": "Presión",
+      "location": "Área técnica 3",
+      "client_id": "C001",
+      "site_id": "S001",
+      "status": "Activo",
+      "last_calibration": "2025-10-19",
+      "last_maintenance": "2026-07-16",
+      "next_calibration": "2026-10-04",
+      "next_review": "2026-11-13",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E012",
+      "name": "Manómetro digital",
+      "code": "BASEP-EQ-012",
+      "serial": "SN-2024-1211",
+      "brand": "WIKA",
+      "model": "CPG1500",
+      "category": "Presión",
+      "location": "Área técnica 3",
+      "client_id": "C002",
+      "site_id": "S002",
+      "status": "Activo",
+      "last_calibration": "2025-10-18",
+      "last_maintenance": "2026-07-15",
+      "next_calibration": "2026-10-02",
+      "next_review": "2026-11-12",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E013",
+      "name": "Manómetro digital",
+      "code": "BASEP-EQ-013",
+      "serial": "SN-2024-1212",
+      "brand": "WIKA",
+      "model": "CPG1500",
+      "category": "Presión",
+      "location": "Área técnica 3",
+      "client_id": "C003",
+      "site_id": "S003",
+      "status": "Próximo a vencer",
+      "last_calibration": "2025-10-17",
+      "last_maintenance": "2026-07-14",
+      "next_calibration": "2026-09-30",
+      "next_review": "2026-11-11",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E014",
+      "name": "Manómetro digital",
+      "code": "BASEP-EQ-014",
+      "serial": "SN-2024-1213",
+      "brand": "WIKA",
+      "model": "CPG1500",
+      "category": "Presión",
+      "location": "Área técnica 3",
+      "client_id": "C004",
+      "site_id": "S004",
+      "status": "Vencido",
+      "last_calibration": "2025-10-16",
+      "last_maintenance": "2026-07-13",
+      "next_calibration": "2026-09-28",
+      "next_review": "2026-11-10",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E015",
+      "name": "Manómetro digital",
+      "code": "BASEP-EQ-015",
+      "serial": "SN-2024-1214",
+      "brand": "WIKA",
+      "model": "CPG1500",
+      "category": "Presión",
+      "location": "Área técnica 3",
+      "client_id": "C005",
+      "site_id": "S005",
+      "status": "Fuera de servicio",
+      "last_calibration": "2025-10-15",
+      "last_maintenance": "2026-07-12",
+      "next_calibration": "2026-09-26",
+      "next_review": "2026-11-09",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E016",
+      "name": "Centrífuga",
+      "code": "BASEP-EQ-016",
+      "serial": "SN-2024-1215",
+      "brand": "Hettich",
+      "model": "EBA 200",
+      "category": "Laboratorio",
+      "location": "Área técnica 4",
+      "client_id": "C001",
+      "site_id": "S001",
+      "status": "Activo",
+      "last_calibration": "2025-10-14",
+      "last_maintenance": "2026-07-11",
+      "next_calibration": "2026-09-24",
+      "next_review": "2026-11-08",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E017",
+      "name": "Centrífuga",
+      "code": "BASEP-EQ-017",
+      "serial": "SN-2024-1216",
+      "brand": "Hettich",
+      "model": "EBA 200",
+      "category": "Laboratorio",
+      "location": "Área técnica 4",
+      "client_id": "C002",
+      "site_id": "S002",
+      "status": "Activo",
+      "last_calibration": "2025-10-13",
+      "last_maintenance": "2026-07-10",
+      "next_calibration": "2026-09-22",
+      "next_review": "2026-11-07",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E018",
+      "name": "Centrífuga",
+      "code": "BASEP-EQ-018",
+      "serial": "SN-2024-1217",
+      "brand": "Hettich",
+      "model": "EBA 200",
+      "category": "Laboratorio",
+      "location": "Área técnica 4",
+      "client_id": "C003",
+      "site_id": "S003",
+      "status": "Próximo a vencer",
+      "last_calibration": "2025-10-12",
+      "last_maintenance": "2026-07-09",
+      "next_calibration": "2026-09-20",
+      "next_review": "2026-11-06",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E019",
+      "name": "Centrífuga",
+      "code": "BASEP-EQ-019",
+      "serial": "SN-2024-1218",
+      "brand": "Hettich",
+      "model": "EBA 200",
+      "category": "Laboratorio",
+      "location": "Área técnica 4",
+      "client_id": "C004",
+      "site_id": "S004",
+      "status": "Vencido",
+      "last_calibration": "2025-10-11",
+      "last_maintenance": "2026-07-08",
+      "next_calibration": "2026-09-18",
+      "next_review": "2026-11-05",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "id": "E020",
+      "name": "Centrífuga",
+      "code": "BASEP-EQ-020",
+      "serial": "SN-2024-1219",
+      "brand": "Hettich",
+      "model": "EBA 200",
+      "category": "Laboratorio",
+      "location": "Área técnica 4",
+      "client_id": "C005",
+      "site_id": "S005",
+      "status": "Fuera de servicio",
+      "last_calibration": "2025-10-10",
+      "last_maintenance": "2026-07-07",
+      "next_calibration": "2026-09-16",
+      "next_review": "2026-11-04",
+      "notes": "Equipo de demostración.",
+      "photos": [],
+      "documents": []
+    }
+  ],
+  "techs": [
+    {
+      "id": "T001",
+      "name": "Daniel Martínez",
+      "phone": "3105550200",
+      "email": "tecnico0@example.com",
+      "specialty": "Metrología",
+      "status": "Disponible",
+      "lat": 4.62,
+      "lon": -74.1,
+      "device": "Samsung A54",
+      "battery": 92
+    },
+    {
+      "id": "T002",
+      "name": "Sofía Ramírez",
+      "phone": "3105550201",
+      "email": "tecnico1@example.com",
+      "specialty": "Electromecánica",
+      "status": "En servicio",
+      "lat": 4.632,
+      "lon": -74.094,
+      "device": "Motorola G84",
+      "battery": 85
+    },
+    {
+      "id": "T003",
+      "name": "Carlos Méndez",
+      "phone": "3105550202",
+      "email": "tecnico2@example.com",
+      "specialty": "Biomédica",
+      "status": "En desplazamiento",
+      "lat": 4.644,
+      "lon": -74.088,
+      "device": "iPhone 13",
+      "battery": 78
+    },
+    {
+      "id": "T004",
+      "name": "Valentina Castro",
+      "phone": "3105550203",
+      "email": "tecnico3@example.com",
+      "specialty": "Metrología",
+      "status": "Pausa",
+      "lat": 4.656,
+      "lon": -74.082,
+      "device": "Samsung A54",
+      "battery": 71
+    },
+    {
+      "id": "T005",
+      "name": "Juan Herrera",
+      "phone": "3105550204",
+      "email": "tecnico4@example.com",
+      "specialty": "Electromecánica",
+      "status": "Disponible",
+      "lat": 4.668,
+      "lon": -74.076,
+      "device": "Motorola G84",
+      "battery": 64
+    },
+    {
+      "id": "T006",
+      "name": "Natalia Gómez",
+      "phone": "3105550205",
+      "email": "tecnico5@example.com",
+      "specialty": "Biomédica",
+      "status": "En servicio",
+      "lat": 4.68,
+      "lon": -74.07,
+      "device": "iPhone 13",
+      "battery": 57
+    },
+    {
+      "id": "T007",
+      "name": "Felipe Vargas",
+      "phone": "3105550206",
+      "email": "tecnico6@example.com",
+      "specialty": "Metrología",
+      "status": "En desplazamiento",
+      "lat": 4.692,
+      "lon": -74.064,
+      "device": "Samsung A54",
+      "battery": 50
+    },
+    {
+      "id": "T008",
+      "name": "Andrea Moreno",
+      "phone": "3105550207",
+      "email": "tecnico7@example.com",
+      "specialty": "Electromecánica",
+      "status": "Pausa",
+      "lat": 4.704,
+      "lon": -74.05799999999999,
+      "device": "Motorola G84",
+      "battery": 43
+    }
+  ],
+  "orders": [
+    {
+      "id": "OT-1001",
+      "client_id": "C001",
+      "site_id": "S001",
+      "equipment_id": "E001",
+      "tech_id": "T001",
+      "type": "Calibración",
+      "date": "2026-09-20",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Media",
+      "address": "Carrera 15 # 41-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Enviada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-20T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-20T07:10:00",
+          "actor": "Marcela"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1002",
+      "client_id": "C002",
+      "site_id": "S002",
+      "equipment_id": "E002",
+      "tech_id": "T002",
+      "type": "Mantenimiento preventivo",
+      "date": "2026-09-21",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Alta",
+      "address": "Carrera 18 # 42-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Aceptada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-21T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-21T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-21T07:11:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-21T07:12:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-21T07:13:00",
+          "actor": "Sofía Ramírez"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1003",
+      "client_id": "C003",
+      "site_id": "S003",
+      "equipment_id": "E003",
+      "tech_id": "T003",
+      "type": "Mantenimiento correctivo",
+      "date": "2026-09-24",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Baja",
+      "address": "Carrera 21 # 43-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "En ejecución",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-24T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-24T07:11:00",
+          "actor": "Carlos Méndez"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-24T07:12:00",
+          "actor": "Carlos Méndez"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-24T07:13:00",
+          "actor": "Carlos Méndez"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-24T08:00:00",
+          "actor": "Carlos Méndez"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-24T08:45:00",
+          "actor": "Carlos Méndez"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-24T09:00:00",
+          "actor": "Carlos Méndez"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1004",
+      "client_id": "C004",
+      "site_id": "S004",
+      "equipment_id": "E004",
+      "tech_id": "T004",
+      "type": "Inspección",
+      "date": "2026-09-20",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Media",
+      "address": "Carrera 24 # 44-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Finalizada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-20T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-20T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-20T07:11:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-20T07:12:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-20T07:13:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-20T08:00:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-20T08:45:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-20T09:00:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Check-out",
+          "at": "2026-09-20T10:45:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Finalizada",
+          "at": "2026-09-20T11:00:00",
+          "actor": "Valentina Castro"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": true,
+      "form": {
+        "condition": "Operativo",
+        "reference": 100,
+        "measured": 100.02,
+        "error": 0.02,
+        "tolerance": 0.1,
+        "result": "Dentro de tolerancia",
+        "work": "Verificación y ajuste general",
+        "components": "Sensores y conexiones",
+        "final_condition": "Operativo",
+        "observations": "Servicio de demostración."
+      },
+      "closure": {
+        "receiver": "Paula Torres",
+        "position": "Coordinación técnica",
+        "quality": 5,
+        "punctuality": 4,
+        "attention": 5,
+        "comments": "Servicio satisfactorio.",
+        "signature": "Paula Torres"
+      }
+    },
+    {
+      "id": "OT-1005",
+      "client_id": "C005",
+      "site_id": "S005",
+      "equipment_id": "E005",
+      "tech_id": "T005",
+      "type": "Verificación",
+      "date": "2026-09-24",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Alta",
+      "address": "Carrera 27 # 45-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Creada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1006",
+      "client_id": "C001",
+      "site_id": "S001",
+      "equipment_id": "E006",
+      "tech_id": "T006",
+      "type": "Calibración",
+      "date": "2026-09-22",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Baja",
+      "address": "Carrera 15 # 41-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Finalizada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-22T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-22T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-22T07:11:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-22T07:12:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-22T07:13:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-22T08:00:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-22T08:45:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-22T09:00:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "Check-out",
+          "at": "2026-09-22T10:45:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "Finalizada",
+          "at": "2026-09-22T11:00:00",
+          "actor": "Natalia Gómez"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": true,
+      "form": {
+        "condition": "Operativo",
+        "reference": 100,
+        "measured": 100.02,
+        "error": 0.02,
+        "tolerance": 0.1,
+        "result": "Dentro de tolerancia",
+        "work": "Verificación y ajuste general",
+        "components": "Sensores y conexiones",
+        "final_condition": "Operativo",
+        "observations": "Servicio de demostración."
+      },
+      "closure": {
+        "receiver": "Laura Rojas",
+        "position": "Coordinación técnica",
+        "quality": 5,
+        "punctuality": 4,
+        "attention": 5,
+        "comments": "Servicio satisfactorio.",
+        "signature": "Laura Rojas"
+      }
+    },
+    {
+      "id": "OT-1007",
+      "client_id": "C002",
+      "site_id": "S002",
+      "equipment_id": "E007",
+      "tech_id": "T007",
+      "type": "Mantenimiento preventivo",
+      "date": "2026-09-26",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Media",
+      "address": "Carrera 18 # 42-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Enviada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-24T07:10:00",
+          "actor": "Marcela"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1008",
+      "client_id": "C003",
+      "site_id": "S003",
+      "equipment_id": "E008",
+      "tech_id": "T008",
+      "type": "Mantenimiento correctivo",
+      "date": "2026-09-27",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Alta",
+      "address": "Carrera 21 # 43-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Aceptada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-24T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-24T07:11:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-24T07:12:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-24T07:13:00",
+          "actor": "Andrea Moreno"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1009",
+      "client_id": "C004",
+      "site_id": "S004",
+      "equipment_id": "E009",
+      "tech_id": "T001",
+      "type": "Inspección",
+      "date": "2026-09-24",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Baja",
+      "address": "Carrera 24 # 44-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "En ejecución",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-24T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-24T07:11:00",
+          "actor": "Daniel Martínez"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-24T07:12:00",
+          "actor": "Daniel Martínez"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-24T07:13:00",
+          "actor": "Daniel Martínez"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-24T08:00:00",
+          "actor": "Daniel Martínez"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-24T08:45:00",
+          "actor": "Daniel Martínez"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-24T09:00:00",
+          "actor": "Daniel Martínez"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1010",
+      "client_id": "C005",
+      "site_id": "S005",
+      "equipment_id": "E010",
+      "tech_id": "T002",
+      "type": "Verificación",
+      "date": "2026-09-22",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Media",
+      "address": "Carrera 27 # 45-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Finalizada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-22T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-22T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-22T07:11:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-22T07:12:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-22T07:13:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-22T08:00:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-22T08:45:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-22T09:00:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Check-out",
+          "at": "2026-09-22T10:45:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Finalizada",
+          "at": "2026-09-22T11:00:00",
+          "actor": "Sofía Ramírez"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": true,
+      "form": {
+        "condition": "Operativo",
+        "reference": 100,
+        "measured": 100.02,
+        "error": 0.02,
+        "tolerance": 0.1,
+        "result": "Dentro de tolerancia",
+        "work": "Verificación y ajuste general",
+        "components": "Sensores y conexiones",
+        "final_condition": "Operativo",
+        "observations": "Servicio de demostración."
+      },
+      "closure": {
+        "receiver": "Diana López",
+        "position": "Coordinación técnica",
+        "quality": 5,
+        "punctuality": 4,
+        "attention": 5,
+        "comments": "Servicio satisfactorio.",
+        "signature": "Diana López"
+      }
+    },
+    {
+      "id": "OT-1011",
+      "client_id": "C001",
+      "site_id": "S001",
+      "equipment_id": "E011",
+      "tech_id": "T003",
+      "type": "Calibración",
+      "date": "2026-09-21",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Alta",
+      "address": "Carrera 15 # 41-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Creada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-21T07:00:00",
+          "actor": "Marcela"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1012",
+      "client_id": "C002",
+      "site_id": "S002",
+      "equipment_id": "E012",
+      "tech_id": "T004",
+      "type": "Mantenimiento preventivo",
+      "date": "2026-09-20",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Baja",
+      "address": "Carrera 18 # 42-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Finalizada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-20T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-20T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-20T07:11:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-20T07:12:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-20T07:13:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-20T08:00:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-20T08:45:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-20T09:00:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Check-out",
+          "at": "2026-09-20T10:45:00",
+          "actor": "Valentina Castro"
+        },
+        {
+          "state": "Finalizada",
+          "at": "2026-09-20T11:00:00",
+          "actor": "Valentina Castro"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": true,
+      "form": {
+        "condition": "Operativo",
+        "reference": 100,
+        "measured": 100.02,
+        "error": 0.02,
+        "tolerance": 0.1,
+        "result": "Dentro de tolerancia",
+        "work": "Verificación y ajuste general",
+        "components": "Sensores y conexiones",
+        "final_condition": "Operativo",
+        "observations": "Servicio de demostración."
+      },
+      "closure": {
+        "receiver": "Camilo Pérez",
+        "position": "Coordinación técnica",
+        "quality": 5,
+        "punctuality": 4,
+        "attention": 5,
+        "comments": "Servicio satisfactorio.",
+        "signature": "Camilo Pérez"
+      }
+    },
+    {
+      "id": "OT-1013",
+      "client_id": "C003",
+      "site_id": "S003",
+      "equipment_id": "E013",
+      "tech_id": "T005",
+      "type": "Mantenimiento correctivo",
+      "date": "2026-09-23",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Media",
+      "address": "Carrera 21 # 43-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Enviada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-23T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-23T07:10:00",
+          "actor": "Marcela"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1014",
+      "client_id": "C004",
+      "site_id": "S004",
+      "equipment_id": "E014",
+      "tech_id": "T006",
+      "type": "Inspección",
+      "date": "2026-09-24",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Alta",
+      "address": "Carrera 24 # 44-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Aceptada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-24T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-24T07:11:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-24T07:12:00",
+          "actor": "Natalia Gómez"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-24T07:13:00",
+          "actor": "Natalia Gómez"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1015",
+      "client_id": "C005",
+      "site_id": "S005",
+      "equipment_id": "E015",
+      "tech_id": "T007",
+      "type": "Verificación",
+      "date": "2026-09-24",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Baja",
+      "address": "Carrera 27 # 45-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "En ejecución",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-24T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-24T07:11:00",
+          "actor": "Felipe Vargas"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-24T07:12:00",
+          "actor": "Felipe Vargas"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-24T07:13:00",
+          "actor": "Felipe Vargas"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-24T08:00:00",
+          "actor": "Felipe Vargas"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-24T08:45:00",
+          "actor": "Felipe Vargas"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-24T09:00:00",
+          "actor": "Felipe Vargas"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1016",
+      "client_id": "C001",
+      "site_id": "S001",
+      "equipment_id": "E016",
+      "tech_id": "T008",
+      "type": "Calibración",
+      "date": "2026-09-20",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Media",
+      "address": "Carrera 15 # 41-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Finalizada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-20T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-20T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-20T07:11:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-20T07:12:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-20T07:13:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-20T08:00:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-20T08:45:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-20T09:00:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "Check-out",
+          "at": "2026-09-20T10:45:00",
+          "actor": "Andrea Moreno"
+        },
+        {
+          "state": "Finalizada",
+          "at": "2026-09-20T11:00:00",
+          "actor": "Andrea Moreno"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": true,
+      "form": {
+        "condition": "Operativo",
+        "reference": 100,
+        "measured": 100.02,
+        "error": 0.02,
+        "tolerance": 0.1,
+        "result": "Dentro de tolerancia",
+        "work": "Verificación y ajuste general",
+        "components": "Sensores y conexiones",
+        "final_condition": "Operativo",
+        "observations": "Servicio de demostración."
+      },
+      "closure": {
+        "receiver": "Laura Rojas",
+        "position": "Coordinación técnica",
+        "quality": 5,
+        "punctuality": 4,
+        "attention": 5,
+        "comments": "Servicio satisfactorio.",
+        "signature": "Laura Rojas"
+      }
+    },
+    {
+      "id": "OT-1017",
+      "client_id": "C002",
+      "site_id": "S002",
+      "equipment_id": "E017",
+      "tech_id": "T001",
+      "type": "Mantenimiento preventivo",
+      "date": "2026-09-27",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Alta",
+      "address": "Carrera 18 # 42-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Creada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-24T07:00:00",
+          "actor": "Marcela"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": false,
+      "form": {},
+      "closure": {}
+    },
+    {
+      "id": "OT-1018",
+      "client_id": "C003",
+      "site_id": "S003",
+      "equipment_id": "E018",
+      "tech_id": "T002",
+      "type": "Mantenimiento correctivo",
+      "date": "2026-09-22",
+      "time": "09:00",
+      "duration": 120,
+      "priority": "Baja",
+      "address": "Carrera 21 # 43-20",
+      "description": "Verificar funcionamiento y registrar resultados del equipo.",
+      "status": "Finalizada",
+      "ticket_id": null,
+      "timeline": [
+        {
+          "state": "Creada",
+          "at": "2026-09-22T07:00:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Enviada",
+          "at": "2026-09-22T07:10:00",
+          "actor": "Marcela"
+        },
+        {
+          "state": "Recibida",
+          "at": "2026-09-22T07:11:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Vista",
+          "at": "2026-09-22T07:12:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Aceptada",
+          "at": "2026-09-22T07:13:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "En desplazamiento",
+          "at": "2026-09-22T08:00:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Check-in",
+          "at": "2026-09-22T08:45:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "En ejecución",
+          "at": "2026-09-22T09:00:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Check-out",
+          "at": "2026-09-22T10:45:00",
+          "actor": "Sofía Ramírez"
+        },
+        {
+          "state": "Finalizada",
+          "at": "2026-09-22T11:00:00",
+          "actor": "Sofía Ramírez"
+        }
+      ],
+      "photos": [],
+      "documents": [],
+      "notes": [],
+      "parts": [],
+      "published": true,
+      "form": {
+        "condition": "Operativo",
+        "reference": 100,
+        "measured": 100.02,
+        "error": 0.02,
+        "tolerance": 0.1,
+        "result": "Dentro de tolerancia",
+        "work": "Verificación y ajuste general",
+        "components": "Sensores y conexiones",
+        "final_condition": "Operativo",
+        "observations": "Servicio de demostración."
+      },
+      "closure": {
+        "receiver": "Andrés Ruiz",
+        "position": "Coordinación técnica",
+        "quality": 5,
+        "punctuality": 4,
+        "attention": 5,
+        "comments": "Servicio satisfactorio.",
+        "signature": "Andrés Ruiz"
+      }
+    }
+  ],
+  "tickets": [
+    {
+      "id": "TK-2001",
+      "client_id": "C001",
+      "equipment_id": "E001",
+      "created": "2026-09-24T09:33:38",
+      "type": "Calibración",
+      "priority": "Alta",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Laura Rojas",
+      "status": "Recibido",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2002",
+      "client_id": "C002",
+      "equipment_id": "E002",
+      "created": "2026-09-24T06:33:38",
+      "type": "Mantenimiento preventivo",
+      "priority": "Media",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Camilo Pérez",
+      "status": "En revisión",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2003",
+      "client_id": "C003",
+      "equipment_id": "E003",
+      "created": "2026-09-24T03:33:38",
+      "type": "Mantenimiento correctivo",
+      "priority": "Alta",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Andrés Ruiz",
+      "status": "Recibido",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2004",
+      "client_id": "C004",
+      "equipment_id": "E004",
+      "created": "2026-09-24T00:33:38",
+      "type": "Inspección",
+      "priority": "Media",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Paula Torres",
+      "status": "En revisión",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2005",
+      "client_id": "C005",
+      "equipment_id": "E005",
+      "created": "2026-09-23T21:33:38",
+      "type": "Verificación",
+      "priority": "Alta",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Diana López",
+      "status": "Recibido",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2006",
+      "client_id": "C001",
+      "equipment_id": "E006",
+      "created": "2026-09-23T18:33:38",
+      "type": "Calibración",
+      "priority": "Media",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Laura Rojas",
+      "status": "En revisión",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2007",
+      "client_id": "C002",
+      "equipment_id": "E007",
+      "created": "2026-09-23T15:33:38",
+      "type": "Mantenimiento preventivo",
+      "priority": "Alta",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Camilo Pérez",
+      "status": "Recibido",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2008",
+      "client_id": "C003",
+      "equipment_id": "E008",
+      "created": "2026-09-23T12:33:38",
+      "type": "Mantenimiento correctivo",
+      "priority": "Media",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Andrés Ruiz",
+      "status": "En revisión",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2009",
+      "client_id": "C004",
+      "equipment_id": "E009",
+      "created": "2026-09-23T09:33:38",
+      "type": "Inspección",
+      "priority": "Alta",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Paula Torres",
+      "status": "Recibido",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    },
+    {
+      "id": "TK-2010",
+      "client_id": "C005",
+      "equipment_id": "E010",
+      "created": "2026-09-23T06:33:38",
+      "type": "Verificación",
+      "priority": "Media",
+      "description": "Solicitamos revisión y programación del equipo.",
+      "contact": "Diana López",
+      "status": "En revisión",
+      "responsible": "Marcela",
+      "photos": [],
+      "order_id": null,
+      "first_response": null,
+      "closed_at": null
+    }
+  ],
+  "inventory": [
+    {
+      "id": "R001",
+      "name": "Sensor de temperatura PT100",
+      "category": "Sensores",
+      "stock": 12,
+      "minimum": 4,
+      "location": "Bodega principal"
+    },
+    {
+      "id": "R002",
+      "name": "Fusible 5 A",
+      "category": "Eléctrico",
+      "stock": 3,
+      "minimum": 5,
+      "location": "Bodega principal"
+    },
+    {
+      "id": "R003",
+      "name": "Kit de sellos",
+      "category": "Mecánico",
+      "stock": 8,
+      "minimum": 3,
+      "location": "Bodega principal"
+    },
+    {
+      "id": "R004",
+      "name": "Cable de alimentación",
+      "category": "Eléctrico",
+      "stock": 15,
+      "minimum": 5,
+      "location": "Bodega principal"
+    },
+    {
+      "id": "R005",
+      "name": "Rodamiento 6202",
+      "category": "Mecánico",
+      "stock": 2,
+      "minimum": 4,
+      "location": "Bodega principal"
+    },
+    {
+      "id": "R006",
+      "name": "Solución de limpieza",
+      "category": "Consumibles",
+      "stock": 20,
+      "minimum": 8,
+      "location": "Bodega principal"
+    }
+  ],
+  "movements": [],
+  "part_requests": [
+    {
+      "id": "REP-001",
+      "order_id": "OT-1003",
+      "tech_id": "T003",
+      "equipment_id": "E003",
+      "part_id": "R002",
+      "quantity": 2,
+      "reason": "Reemplazo preventivo",
+      "priority": "Alta",
+      "status": "Pendiente"
+    }
+  ]
+}
