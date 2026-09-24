@@ -53,3 +53,14 @@ La V1 está diseñada para un único proceso local. Para reiniciar los datos, de
 - Técnico: Hoy / Semana / Todos, tarjetas y detalle con acciones grandes. Cliente: acceso simplificado y sección de certificados autorizados.
 - Los enlaces del calendario abren el detalle correspondiente. El buscador global filtra datos según la vista seleccionada.
 - Limitaciones: tablas y calendario se desplazan horizontalmente en pantallas pequeñas; no hay arrastre de eventos. El mapa requiere internet. El JPEG de origen limita el detalle del logo y no se inventaron píxeles nuevos.
+
+## Despliegue en Streamlit Community Cloud
+
+- Repositorio: `isabelgtorres05/basep-prototipo`.
+- Branch: `main`.
+- Archivo principal: `app.py` en la raíz.
+- Python recomendado: 3.13 (versión usada en las pruebas locales).
+- Instalar las dependencias desde `requirements.txt`.
+- Se deben conservar las carpetas `.streamlit`, `assets`, `components`, `data`, `services`, `tests` y `views`.
+- La dirección del servidor no se fija en la configuración compartida. El iniciador local conserva `127.0.0.1`.
+- Los datos JSON y archivos adjuntos del prototipo en Community Cloud pueden perder cambios al reiniciar o desplegar; este repositorio contiene datos de demostración, no una base de datos empresarial.
