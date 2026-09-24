@@ -1,4 +1,6 @@
 import os
+os.environ["SUPABASE_URL"]=""
+os.environ["SUPABASE_KEY"]=""
 import tempfile
 from pathlib import Path
 TEST_ROOT=Path(os.environ.get('BASEP_TEST_ROOT',str(Path(__file__).resolve().parents[1]/'work')))
