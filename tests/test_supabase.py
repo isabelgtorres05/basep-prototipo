@@ -61,4 +61,20 @@ class AdapterTests(unittest.TestCase):
                 at.radio(key='nav').set_value(name).run()
                 self.assertFalse(at.exception,name+': '+str(at.exception))
 
+    def test_login_stops_before_loading_private_data(self):
+        from streamlit.testing.v1 import AppTest
+        config={'SUPABASE_URL':'https://test.supabase.co','SUPABASE_KEY':'sb_secret_test_only','BASEP_ACCESS_PASSWORD':'test-password-not-a-real-secret'}
+        with patch('services.supabase_client.setting',side_effect=lambda k:config.get(k,'')), patch('services.store.load') as read:
+            at=AppTest.from_file(str(ROOT/'app.py'),default_timeout=20).run()
+            self.assertFalse(at.exception)
+            read.assert_not_called()
+            self.assertTrue(any(x.label=='Contraseña del piloto' for x in at.text_input))
+
+    def test_remote_failure_never_falls_back_to_demo(self):
+        from services.store import load
+        with patch('services.store.configured',return_value=True), patch('services.supabase_store.load',side_effect=ValueError('unavailable')), patch('services.store.seed') as demo:
+            with self.assertRaises(ValueError):load()
+            demo.assert_not_called()
+
 if __name__=='__main__':unittest.main()
+
