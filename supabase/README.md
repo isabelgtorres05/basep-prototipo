@@ -72,5 +72,8 @@ crear y enviar orden asignada. Cerrar y abrir otra sesión: verificar los regist
 En vista Técnico: Recibir → Vista → Aceptar → Desplazamiento → Check-in → Iniciar.
 Guardar formulario, cargar fotografía, guardar recepción y firma, Check-out,
 Finalizar. Confirmar eventos y fechas en Supabase; descargar evidencia después
-de reiniciar el servidor. Esta comprobación de extremo a extremo está pendiente
-hasta configurar la clave privada.
+de reiniciar el servidor. Esta comprobación se completó localmente: lectura/escritura en Supabase, orden
+finalizada con diez eventos y cuatro fechas, evidencia privada descargada en un
+nuevo proceso y acceso desde una nueva sesión Streamlit. La orden de prueba
+está identificada como VALIDACIÓN y se conserva para revisión. Community Cloud
+requiere configurar sus propios secretos; secrets.toml local no se publica.
