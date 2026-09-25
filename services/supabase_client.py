@@ -23,8 +23,8 @@ def configured():
 @lru_cache(maxsize=2)
 def _client(url, key):
     from supabase import create_client
-    from supabase.lib.client_options import ClientOptions
-    return create_client(url, key, options=ClientOptions(auto_refresh_token=False, persist_session=False))
+    from supabase.lib.client_options import SyncClientOptions
+    return create_client(url, key, options=SyncClientOptions(auto_refresh_token=False, persist_session=False))
 
 def client():
     if not configured():
