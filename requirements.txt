@@ -4,3 +4,4 @@ Pillow>=10,<13
 altair>=5,<7
 supabase==2.31.0
 tzdata>=2025.1
+h2>=4,<5
