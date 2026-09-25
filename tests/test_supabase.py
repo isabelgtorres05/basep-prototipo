@@ -70,6 +70,12 @@ class AdapterTests(unittest.TestCase):
             read.assert_not_called()
             self.assertTrue(any(x.label=='Contraseña del piloto' for x in at.text_input))
 
+    def test_installed_sdk_client_can_be_constructed(self):
+        from services.supabase_client import _client
+        # Dummy key, no network request and no real credentials.
+        c=_client('https://example.supabase.co','sb_secret_test_only_not_a_real_key')
+        self.assertIsNotNone(c.postgrest)
+
     def test_remote_failure_never_falls_back_to_demo(self):
         from services.store import load
         with patch('services.store.configured',return_value=True), patch('services.supabase_store.load',side_effect=ValueError('unavailable')), patch('services.store.seed') as demo:
